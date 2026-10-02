@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace WebApplication1.Controllers
+namespace Parcial1_P4_Andhy.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
