@@ -4,7 +4,7 @@ namespace Parcial1_P4_Andhy.Models
 {
     public class NumberRecord
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
 
         public DateTime Fecha { get; set; }
 
