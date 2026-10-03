@@ -6,14 +6,9 @@ namespace Parcial1_P4_Andhy.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
-    public class NumberController : ControllerBase
+    public class NumberController(NumbersService numbersService)
+    : ControllerBase
     {
-        private readonly NumbersService _numbersService;
-
-        public NumberController(NumbersService service)
-        {
-            _numbersService = service;
-        }
 
         //[HttpGet("{numero:int}")]
         //public IActionResult Sumar(int numero)
@@ -24,7 +19,7 @@ namespace Parcial1_P4_Andhy.Controllers
         //}
 
 
-        // Sumar y guardar el cálculo.
+        
         [HttpGet("{numero:int}")]
         public async Task<IActionResult> Sumar(int numero)
         {
@@ -46,27 +41,27 @@ namespace Parcial1_P4_Andhy.Controllers
                 Fecha = DateTime.UtcNow
             };
 
-            await _numbersService.SaveAsync(record);
+            await numbersService.SaveAsync(record);
 
             return Ok(record);
         }
 
-        // Consultar todo el historial.
+        
         [HttpGet("historial")]
         public async Task<IActionResult> GetHistorial()
         {
             var historial =
-                await _numbersService.GetListAsync();
+                await numbersService.GetListAsync();
 
             return Ok(historial);
         }
 
-        // Consultar un registro por Id.
+        
         [HttpGet("historial/{id:int}")]
         public async Task<IActionResult> GetById(int id)
         {
             var registro =
-                await _numbersService.GetByIdAsync(id);
+                await numbersService.GetByIdAsync(id);
 
             if (registro == null)
             {
@@ -77,14 +72,14 @@ namespace Parcial1_P4_Andhy.Controllers
             return Ok(registro);
         }
 
-        // Actualizar un cálculo.
+       
         [HttpPut("historial/{id:int}")]
         public async Task<IActionResult> Actualizar(
             int id,
             [FromBody] NumberRecord record)
         {
             var existente =
-                await _numbersService.GetByIdAsync(id);
+                await numbersService.GetByIdAsync(id);
 
             if (existente == null)
             {
@@ -107,7 +102,7 @@ namespace Parcial1_P4_Andhy.Controllers
             record.Resultado = resultado;
             record.Fecha = DateTime.UtcNow;
 
-            await _numbersService.UpdateAsync(record);
+            await numbersService.UpdateAsync(record);
 
             return Ok(record);
         }

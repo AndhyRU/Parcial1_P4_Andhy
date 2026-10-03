@@ -2,7 +2,7 @@
 
 namespace Parcial1_P4_Andhy.Models
 {
-    public class NumberRecord
+    public record NumberRecord
     {
         public int Id { get; set; }
 

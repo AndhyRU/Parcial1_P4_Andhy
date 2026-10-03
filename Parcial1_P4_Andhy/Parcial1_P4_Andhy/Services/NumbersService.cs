@@ -6,21 +6,13 @@ using Parcial1_P4_Andhy.Models;
 
 namespace Parcial1_P4_Andhy.Services
 {
-    public class NumbersService
+    public class NumbersService(IConfiguration configuration)
     {
-
-        private readonly IConfiguration _configuration;
-
-        public NumbersService(IConfiguration configuracion)
-        {
-            _configuration = configuracion;
-        }
-
-        // Crear la tabla.
+        
         public async Task InitializeAsync()
         {
             string? connectionString =
-                _configuration.GetConnectionString("DefaultConnection");
+                configuration.GetConnectionString("DefaultConnection");
 
             using var connection =
                 new SqliteConnection(connectionString);
@@ -39,11 +31,11 @@ namespace Parcial1_P4_Andhy.Services
             await connection.ExecuteAsync(sql);
         }
 
-        // Guardar un cálculo.
+        
         public async Task SaveAsync(NumberRecord record)
         {
             string? connectionString =
-                _configuration.GetConnectionString("DefaultConnection");
+                configuration.GetConnectionString("DefaultConnection");
 
             using var connection =
                 new SqliteConnection(connectionString);
@@ -63,13 +55,16 @@ namespace Parcial1_P4_Andhy.Services
                 record.Numero,
                 record.Resultado
             });
+
+            record.Id = await connection.ExecuteScalarAsync<int>(
+             "SELECT last_insert_rowid();");
         }
 
-        // Actualizar un cálculo.
+        
         public async Task UpdateAsync(NumberRecord record)
         {
             string? connectionString =
-                _configuration.GetConnectionString("DefaultConnection");
+                configuration.GetConnectionString("DefaultConnection");
 
             using var connection =
                 new SqliteConnection(connectionString);
@@ -93,11 +88,11 @@ namespace Parcial1_P4_Andhy.Services
             });
         }
 
-        // Buscar un registro por Id.
+        
         public async Task<NumberRecord?> GetByIdAsync(int id)
         {
             string? connectionString =
-                _configuration.GetConnectionString("DefaultConnection");
+                configuration.GetConnectionString("DefaultConnection");
 
             using var connection =
                 new SqliteConnection(connectionString);
@@ -115,11 +110,11 @@ namespace Parcial1_P4_Andhy.Services
                     sql, new { Id = id });
         }
 
-        // Recuperar todo el historial.
+        
         public async Task<IEnumerable<NumberRecord>> GetListAsync()
         {
             string? connectionString =
-                _configuration.GetConnectionString("DefaultConnection");
+                configuration.GetConnectionString("DefaultConnection");
 
             using var connection =
                 new SqliteConnection(connectionString);
