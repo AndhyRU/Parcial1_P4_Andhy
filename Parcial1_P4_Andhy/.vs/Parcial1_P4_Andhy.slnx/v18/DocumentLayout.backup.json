@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\TAREA-1\\Parcial1_P4_Andhy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\controllers\\numbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\controllers\\numbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\.gitignore||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\models\\numberrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\models\\numberrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\services\\numbersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\services\\numbersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\models\\numberrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\models\\numberrecord.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\controllers\\numbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\controllers\\numbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,23 +30,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
+              "Title": ".gitignore",
+              "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\.gitignore",
+              "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\.gitignore",
+              "ToolTip": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\.gitignore",
+              "RelativeToolTip": "Parcial1_P4_Andhy\\.gitignore",
+              "ViewState": "AgIAANYBAAAAAAAAAAAAAOQBAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-10-05T23:34:01.319Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Program.cs",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Program.cs",
               "ToolTip": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Program.cs",
               "RelativeToolTip": "Parcial1_P4_Andhy\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T23:10:32.593Z"
+              "WhenOpened": "2026-10-05T23:10:32.593Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "NumberRecord.cs",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Models\\NumberRecord.cs",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Models\\NumberRecord.cs",
@@ -55,13 +73,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "NumberController.cs",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
               "ToolTip": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
               "RelativeToolTip": "Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-05T22:42:43.726Z",
               "EditorCaption": ""
@@ -74,7 +92,7 @@
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Services\\NumbersService.cs",
               "ToolTip": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Services\\NumbersService.cs",
               "RelativeToolTip": "Parcial1_P4_Andhy\\Services\\NumbersService.cs",
-              "ViewState": "AgIAAD4AAAAAAAAAAAASwFgAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-05T22:27:05.512Z",
               "EditorCaption": ""
