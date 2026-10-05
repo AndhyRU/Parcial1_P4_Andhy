@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\TAREA-1\\Parcial1_P4_Andhy\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\controllers\\numbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\controllers\\numbercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|c:\\tarea-1\\parcial1_p4_andhy\\parcial1_p4_andhy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{FC105827-52A3-E08D-6168-FFB2111A39A2}|Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj|solutionrelative:parcial1_p4_andhy\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "NumberController.cs",
+              "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
+              "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
+              "ToolTip": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
+              "RelativeToolTip": "Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-05T13:39:24.298Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\appsettings.json",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\appsettings.json",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Program.cs",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Program.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T13:34:41.408Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T13:34:41.408Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NumbersService.cs",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Services\\NumbersService.cs",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Services\\NumbersService.cs",
@@ -64,12 +80,11 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Services\\NumbersService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T13:34:31.499Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T13:34:31.499Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NumberRecord.cs",
               "DocumentMoniker": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Models\\NumberRecord.cs",
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\Models\\NumberRecord.cs",
@@ -77,8 +92,7 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Models\\NumberRecord.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T13:33:25.505Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T13:33:25.505Z"
             }
           ]
         }
