@@ -7,7 +7,7 @@ namespace Parcial1_P4_Andhy.Controllers
     [ApiController]
     [Route("api/[controller]")]
     public class NumberController(NumbersService numbersService)
-    : ControllerBase
+        : ControllerBase
     {
 
         [HttpGet("{numero:int}")]
@@ -24,12 +24,10 @@ namespace Parcial1_P4_Andhy.Controllers
                 return BadRequest("El número es demasiado grande.");
             }
 
-            var record = new NumberRecord
-            {
-                Numero = numero,
-                Resultado = resultado,
-                Fecha = DateTime.UtcNow
-            };
+            var record = new NumberRecordSet(
+                numero,
+                resultado
+            );
 
             await numbersService.SaveAsync(record);
 
@@ -66,7 +64,7 @@ namespace Parcial1_P4_Andhy.Controllers
         [HttpPut("historial/{id:int}")]
         public async Task<IActionResult> Actualizar(
             int id,
-            [FromBody] NumberRecord record)
+            [FromBody] NumberRecordSet record)
         {
             var existente =
                 await numbersService.GetByIdAsync(id);
@@ -88,13 +86,14 @@ namespace Parcial1_P4_Andhy.Controllers
                 return BadRequest("El número es demasiado grande.");
             }
 
-            record.Id = id;
-            record.Resultado = resultado;
-            record.Fecha = DateTime.UtcNow;
+            var actualizado = new NumberRecordSet(
+                record.Numero,
+                resultado
+            );
 
-            await numbersService.UpdateAsync(record);
+            await numbersService.UpdateAsync(id, actualizado);
 
-            return Ok(record);
+            return Ok(actualizado);
         }
     }
 }

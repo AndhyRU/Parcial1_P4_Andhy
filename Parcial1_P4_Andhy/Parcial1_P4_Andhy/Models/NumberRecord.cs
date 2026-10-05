@@ -1,16 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Parcial1_P4_Andhy.Models
-{
-    public record NumberRecord
-    {
-        public int Id { get; set; }
+namespace Parcial1_P4_Andhy.Models;
 
-        public DateTime Fecha { get; set; }
+public record NumberRecordGet(int Id, DateTime Fecha, int Numero, int Resultado);
 
-        public int Numero { get; set; }
-
-        public int Resultado { get; set; }
-    }
-
-}
+public record NumberRecordSet(int Numero, int Resultado);

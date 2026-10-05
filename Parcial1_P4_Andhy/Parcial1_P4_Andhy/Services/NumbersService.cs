@@ -1,135 +1,112 @@
 ﻿using Dapper;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.Data.Sqlite;
 using Parcial1_P4_Andhy.Models;
 
+namespace Parcial1_P4_Andhy.Services;
 
-namespace Parcial1_P4_Andhy.Services
+public class NumbersService(IConfiguration config)
 {
-    public class NumbersService(IConfiguration configuration)
+    private readonly string _connectionString =
+        config.GetConnectionString("DefaultConnection")!;
+
+    private SqliteConnection CreateConnection =>
+        new SqliteConnection(_connectionString);
+
+
+    public async Task InitializeAsync()
     {
-        
-        public async Task InitializeAsync()
-        {
-            string? connectionString =
-                configuration.GetConnectionString("DefaultConnection");
+        const string query = @"CREATE TABLE IF NOT EXISTS Numeros (" +
+            " Id INTEGER PRIMARY KEY AUTOINCREMENT," +
+            " Fecha TEXT NOT NULL," +
+            " Numero INTEGER NOT NULL," +
+            " Resultado INTEGER NOT NULL);";
 
-            using var connection =
-                new SqliteConnection(connectionString);
+        using var conexion = CreateConnection;
 
-            await connection.OpenAsync();
-
-            string sql = """
-                CREATE TABLE IF NOT EXISTS NumberRecords (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Fecha TEXT DEFAULT CURRENT_TIMESTAMP NOT NULL,
-                    Numero INTEGER NOT NULL,
-                    Resultado INTEGER NOT NULL
-                );
-                """;
-
-            await connection.ExecuteAsync(sql);
-        }
-
-        
-        public async Task SaveAsync(NumberRecord record)
-        {
-            string? connectionString =
-                configuration.GetConnectionString("DefaultConnection");
-
-            using var connection =
-                new SqliteConnection(connectionString);
-
-            await connection.OpenAsync();
-
-            string sql = """
-                INSERT INTO NumberRecords
-                    (Fecha, Numero, Resultado)
-                VALUES
-                    (@Fecha, @Numero, @Resultado);
-                """;
-
-            await connection.ExecuteAsync(sql, new
-            {
-                Fecha = record.Fecha.ToString("O"),
-                record.Numero,
-                record.Resultado
-            });
-
-            record.Id = await connection.ExecuteScalarAsync<int>(
-             "SELECT last_insert_rowid();");
-        }
-
-        
-        public async Task UpdateAsync(NumberRecord record)
-        {
-            string? connectionString =
-                configuration.GetConnectionString("DefaultConnection");
-
-            using var connection =
-                new SqliteConnection(connectionString);
-
-            await connection.OpenAsync();
-
-            string sql = """
-                UPDATE NumberRecords
-                SET Fecha = @Fecha,
-                    Numero = @Numero,
-                    Resultado = @Resultado
-                WHERE Id = @Id;
-                """;
-
-            await connection.ExecuteAsync(sql, new
-            {
-                record.Id,
-                Fecha = record.Fecha.ToString("O"),
-                record.Numero,
-                record.Resultado
-            });
-        }
-
-        
-        public async Task<NumberRecord?> GetByIdAsync(int id)
-        {
-            string? connectionString =
-                configuration.GetConnectionString("DefaultConnection");
-
-            using var connection =
-                new SqliteConnection(connectionString);
-
-            await connection.OpenAsync();
-
-            string sql = """
-                SELECT *
-                FROM NumberRecords
-                WHERE Id = @Id;
-                """;
-
-            return await connection
-                .QueryFirstOrDefaultAsync<NumberRecord>(
-                    sql, new { Id = id });
-        }
-
-        
-        public async Task<IEnumerable<NumberRecord>> GetListAsync()
-        {
-            string? connectionString =
-                configuration.GetConnectionString("DefaultConnection");
-
-            using var connection =
-                new SqliteConnection(connectionString);
-
-            await connection.OpenAsync();
-
-            string sql = """
-                SELECT *
-                FROM NumberRecords
-                ORDER BY Id DESC;
-                """;
-
-            return await connection.QueryAsync<NumberRecord>(sql);
-        }
+        await conexion.ExecuteAsync(query);
     }
 
 
+    public async Task<bool> SaveAsync(NumberRecordSet number)
+    {
+        const string query =
+            @"INSERT INTO Numeros (Fecha, Numero, Resultado)" +
+            " VALUES (DATETIME('now'), @Numero, @Resultado)";
+
+        using var conexion = CreateConnection;
+
+        int filasAfectadas =
+            await conexion.ExecuteAsync(query, number);
+
+        return filasAfectadas > 0;
+    }
+
+
+    public async Task<bool> UpdateAsync(int Id, NumberRecordSet number)
+    {
+        const string query =
+            @"UPDATE Numeros SET" +
+            " Fecha = DATETIME('now')," +
+            " Numero = @Numero," +
+            " Resultado = @Resultado" +
+            " WHERE Id = @Id";
+
+        using var conexion = CreateConnection;
+
+        int filasAfectadas =
+            await conexion.ExecuteAsync(query, new
+            {
+                Id,
+                number.Numero,
+                number.Resultado
+            });
+
+        return filasAfectadas > 0;
+    }
+
+
+    public async Task<NumberRecordGet?> GetByIdAsync(int Id)
+    {
+        const string query =
+            "SELECT Id, Fecha, Numero, Resultado" +
+            " FROM Numeros WHERE Id = @Id";
+
+        using var conexion = CreateConnection;
+
+        var registro = await conexion
+            .QueryFirstOrDefaultAsync(query, new { Id });
+
+        if (registro == null)
+        {
+            return null;
+        }
+
+        return new NumberRecordGet(
+            Convert.ToInt32(registro.Id),
+            DateTime.Parse(registro.Fecha.ToString()),
+            Convert.ToInt32(registro.Numero),
+            Convert.ToInt32(registro.Resultado)
+        );
+    }
+
+
+    public async Task<IEnumerable<NumberRecordGet>> GetListAsync()
+    {
+        const string query =
+            "SELECT Id, Fecha, Numero, Resultado" +
+            " FROM Numeros";
+
+        using var conexion = CreateConnection;
+
+        var registros = await conexion.QueryAsync(query);
+
+        return registros.Select(registro =>
+            new NumberRecordGet(
+                Convert.ToInt32(registro.Id),
+                DateTime.Parse(registro.Fecha.ToString()),
+                Convert.ToInt32(registro.Numero),
+                Convert.ToInt32(registro.Resultado)
+            )
+        );
+    }
 }
