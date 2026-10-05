@@ -40,7 +40,7 @@
               "RelativeDocumentMoniker": "Parcial1_P4_Andhy\\.gitignore",
               "ToolTip": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\.gitignore",
               "RelativeToolTip": "Parcial1_P4_Andhy\\.gitignore",
-              "ViewState": "AgIAANYBAAAAAAAAAAAAAOQBAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAANUBAAAAAAAAAAAAAOQBAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-10-05T23:34:01.319Z",
               "EditorCaption": ""
@@ -55,8 +55,7 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Program.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T23:10:32.593Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T23:10:32.593Z"
             },
             {
               "$type": "Document",
@@ -68,8 +67,7 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Models\\NumberRecord.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T22:42:46.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T22:42:46.976Z"
             },
             {
               "$type": "Document",
@@ -81,8 +79,7 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Controllers\\NumberController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T22:42:43.726Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T22:42:43.726Z"
             },
             {
               "$type": "Document",
@@ -94,8 +91,7 @@
               "RelativeToolTip": "Parcial1_P4_Andhy\\Services\\NumbersService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-05T22:27:05.512Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-05T22:27:05.512Z"
             }
           ]
         }
