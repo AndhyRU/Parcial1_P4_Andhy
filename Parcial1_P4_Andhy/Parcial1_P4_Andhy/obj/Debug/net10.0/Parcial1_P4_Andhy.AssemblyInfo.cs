@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Parcial1_P4_Andhy")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df2eca7a5e99da6fb4bbbfb7f0d60b26d261bf9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+28b694965b19b2135b3bc08aa51324261f789dc8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Parcial1_P4_Andhy")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Parcial1_P4_Andhy")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

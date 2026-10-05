@@ -10,16 +10,6 @@ namespace Parcial1_P4_Andhy.Controllers
     : ControllerBase
     {
 
-        //[HttpGet("{numero:int}")]
-        //public IActionResult Sumar(int numero)
-        //{
-        //    int resultado = numero + numero;
-
-        //    return Ok(resultado);
-        //}
-
-
-
         [HttpGet("{numero:int}")]
         public async Task<IActionResult> Sumar(int numero)
         {
