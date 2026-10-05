@@ -4,6 +4,10 @@ using Parcial1_P4_Andhy.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+Console.WriteLine("BASE DE DATOS:");
+Console.WriteLine(Path.GetFullPath("Numeros.db"));
+
+
 builder.Services.AddScoped<NumbersService>();
 
 
@@ -12,6 +16,7 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
+
 
 using (var scope = app.Services.CreateScope())
 {

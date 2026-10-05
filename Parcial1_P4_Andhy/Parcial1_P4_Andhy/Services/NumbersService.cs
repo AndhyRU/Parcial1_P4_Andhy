@@ -73,40 +73,20 @@ public class NumbersService(IConfiguration config)
 
         using var conexion = CreateConnection;
 
-        var registro = await conexion
-            .QueryFirstOrDefaultAsync(query, new { Id });
-
-        if (registro == null)
-        {
-            return null;
-        }
-
-        return new NumberRecordGet(
-            Convert.ToInt32(registro.Id),
-            DateTime.Parse(registro.Fecha.ToString()),
-            Convert.ToInt32(registro.Numero),
-            Convert.ToInt32(registro.Resultado)
-        );
+        return await conexion
+            .QueryFirstOrDefaultAsync<NumberRecordGet>(
+                query, new { Id });
     }
 
 
     public async Task<IEnumerable<NumberRecordGet>> GetListAsync()
     {
         const string query =
-            "SELECT Id, Fecha, Numero, Resultado" +
-            " FROM Numeros";
+            "SELECT Id, Fecha, Numero, Resultado FROM Numeros";
 
         using var conexion = CreateConnection;
 
-        var registros = await conexion.QueryAsync(query);
-
-        return registros.Select(registro =>
-            new NumberRecordGet(
-                Convert.ToInt32(registro.Id),
-                DateTime.Parse(registro.Fecha.ToString()),
-                Convert.ToInt32(registro.Numero),
-                Convert.ToInt32(registro.Resultado)
-            )
-        );
+        return await conexion.QueryAsync<NumberRecordGet>(query);
     }
 }
+
