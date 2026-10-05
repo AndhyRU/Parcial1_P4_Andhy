@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "cDFozboi/yA=",
+  "success": true,
+  "projectFilePath": "C:\\TAREA-1\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy\\Parcial1_P4_Andhy.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\emmanuel\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.12\\microsoft.aspnetcore.openapi.10.0.12.nupkg.sha512",
+    "C:\\Users\\emmanuel\\.nuget\\packages\\microsoft.openapi\\2.12.0\\microsoft.openapi.2.12.0.nupkg.sha512"
+  ],
+  "logs": []
+}
